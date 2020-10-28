@@ -163,7 +163,7 @@ public class ChaoJiYing {
 				fis.read(data, 0, size);
 				if(null != fis) fis.close();
 				
-				if (data.length > 0)	result = jiaoben.ChaoJiYing.httpPostImage(param, data);
+				if (data.length > 0)	result = ChaoJiYing.httpPostImage(param, data);
 			}
 		} catch(Exception e) {
 			result = "未知问题";
@@ -190,7 +190,7 @@ public class ChaoJiYing {
 		.format(
 				"user=%s&pass=%s&softid=%s&codetype=%s&len_min=%s", username, password, softid, codetype, len_min);
 		try {
-			result = jiaoben.ChaoJiYing.httpPostImage(param, byteArr);
+			result = ChaoJiYing.httpPostImage(param, byteArr);
 		} catch(Exception e) {
 			result = "未知问题";
 		}
@@ -221,7 +221,7 @@ public class ChaoJiYing {
 		String param = String.format("user=%s&pass=%s&softid=%s&codetype=%s&len_min=%s&file_base64=%s", username, password, softid, codetype, len_min, file_base64);
 		String result;
 		try {
-			result = jiaoben.ChaoJiYing.httpRequestData(
+			result = ChaoJiYing.httpRequestData(
 					"http://upload.chaojiying.net/Upload/Processing.php", param);
 		} catch (IOException e) {
 			result = "未知问题";
@@ -247,7 +247,7 @@ public class ChaoJiYing {
 				username, password, softid, id);
 		String result;
 		try {
-			result = jiaoben.ChaoJiYing.httpRequestData(
+			result = ChaoJiYing.httpRequestData(
 					"http://upload.chaojiying.net/Upload/ReportError.php", param);
 		} catch (IOException e) {
 			result = "未知问题";
@@ -268,7 +268,7 @@ public class ChaoJiYing {
 		String param = String.format("user=%s&pass=%s", username, password);
 		String result;
 		try {
-			result = jiaoben.ChaoJiYing.httpRequestData(
+			result = ChaoJiYing.httpRequestData(
 					"http://upload.chaojiying.net/Upload/GetScore.php", param);
 		} catch (IOException e) {
 			result = "未知问题";

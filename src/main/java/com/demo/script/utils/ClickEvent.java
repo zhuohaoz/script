@@ -1,5 +1,7 @@
 package com.demo.script.utils;
 
+import com.demo.script.entity.Xy;
+
 public class ClickEvent {
 
     /**
@@ -11,5 +13,15 @@ public class ClickEvent {
      */
     public static void click(Integer x, Integer y, boolean left, boolean right){
 
+    }
+
+
+    /**
+     * 获取图片的坐标
+     * @param filePath 图片路径
+     * @return 坐标
+     */
+    public static Xy getXy(String filePath){
+        return new Xy();
     }
 }

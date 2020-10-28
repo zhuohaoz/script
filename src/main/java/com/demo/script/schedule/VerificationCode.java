@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.Scheduled;
  */
 @Configuration
 @EnableScheduling
-public class verificationCode {
+public class VerificationCode {
 
     @Scheduled(cron = "0/5 * * * * ?")
     private void configureTasks() {
