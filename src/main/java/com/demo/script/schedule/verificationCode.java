@@ -1,5 +1,6 @@
 package com.demo.script.schedule;
 
+import com.demo.script.utils.ClickEvent;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -25,5 +26,6 @@ public class verificationCode {
 //        ChaoJiYing.PostPic_base64();
 
         //触发点击事件 执行验证
+//        ClickEvent.click();
     }
 }
